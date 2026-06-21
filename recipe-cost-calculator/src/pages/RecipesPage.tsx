@@ -39,7 +39,7 @@ export function RecipesPage() {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-6 lg:grid-cols-[280px_1fr]">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-[17.5rem_1fr]">
       {/* 레시피 목록 */}
       <Card className="h-fit">
         <h2 className="mb-3 text-lg font-semibold text-gray-800">레시피</h2>
@@ -144,12 +144,12 @@ function RecipeEditor({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1fr_320px]">
+    <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1fr_20rem]">
       {/* 좌: 기본정보 + 재료 */}
       <div className="flex flex-col gap-4">
         <Card>
           <div className="flex flex-wrap items-end gap-3">
-            <Field label="레시피명" className="min-w-[160px] flex-1">
+            <Field label="레시피명" className="min-w-40 flex-1">
               <TextInput
                 value={recipe.name}
                 onChange={(e) =>
@@ -213,7 +213,7 @@ function RecipeEditor({
                     key={index}
                     className="flex flex-wrap items-center gap-2 rounded-lg border border-gray-100 bg-gray-50 p-2"
                   >
-                    <span className="min-w-[120px] flex-1 font-medium text-gray-800">
+                    <span className="min-w-30 flex-1 font-medium text-gray-800">
                       {ing?.name ?? '(삭제된 재료)'}
                     </span>
                     <NumberInput

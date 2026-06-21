@@ -1,5 +1,16 @@
 @import 'tailwindcss';
 
+/*
+ * 유쿸(fluid) 반응형의 핵심 레버.
+ * 루트 폰트 크기를 뷰포트 너비에 비례시켜, rem 기반인 Tailwind의
+ * 폰트/간격/크기가 화면 크기에 따라 연속적으로 스케일되도록 한다.
+ * (미디어쿼리 브레이크포인트는 항상 16px 기준이라 영향받지 않음)
+ *   320px → 약 15px,  768px → 약 16.9px,  1024px 이상 → 18px
+ */
+html {
+  font-size: clamp(15px, 13.4px + 0.45vw, 18px);
+}
+
 html,
 body,
 #root {
@@ -8,4 +19,9 @@ body,
 
 body {
   margin: 0;
+}
+
+/* 유쿸 컨테이너/여백 유틸 (vw 기반). Tailwind 임의값으로도 쓰지만 의미를 명확히 하려고 정의 */
+@theme {
+  --spacing-fluid: clamp(1rem, 3vw, 2rem);
 }

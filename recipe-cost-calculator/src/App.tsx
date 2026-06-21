@@ -19,7 +19,7 @@ export default function App() {
     <StoreProvider>
       <div className="flex min-h-full flex-col bg-gray-50 text-gray-900">
         <header className="border-b border-gray-200 bg-white">
-          <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+          <div className="mx-auto flex w-[min(100%,64rem)] items-center justify-between px-fluid py-3">
             <h1 className="flex items-center gap-2 text-lg font-bold text-gray-900">
               🧮 레시피 원가계산기
             </h1>
@@ -36,7 +36,7 @@ export default function App() {
           </div>
         </header>
 
-        <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">
+        <main className="mx-auto w-[min(100%,64rem)] flex-1 px-fluid py-6">
           {tab === 'ingredients' && <IngredientsPage />}
           {tab === 'recipes' && <RecipesPage />}
           {tab === 'dashboard' && <DashboardPage />}
