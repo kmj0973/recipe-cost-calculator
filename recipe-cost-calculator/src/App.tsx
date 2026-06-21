@@ -2,12 +2,14 @@ import { useState } from 'react'
 import { StoreProvider } from './store/StoreProvider'
 import { IngredientsPage } from './pages/IngredientsPage'
 import { RecipesPage } from './pages/RecipesPage'
+import { DashboardPage } from './pages/DashboardPage'
 
-type Tab = 'ingredients' | 'recipes'
+type Tab = 'ingredients' | 'recipes' | 'dashboard'
 
 const TABS: { key: Tab; label: string }[] = [
   { key: 'ingredients', label: '재료' },
   { key: 'recipes', label: '레시피' },
+  { key: 'dashboard', label: '대시보드' },
 ]
 
 export default function App() {
@@ -35,7 +37,9 @@ export default function App() {
         </header>
 
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">
-          {tab === 'ingredients' ? <IngredientsPage /> : <RecipesPage />}
+          {tab === 'ingredients' && <IngredientsPage />}
+          {tab === 'recipes' && <RecipesPage />}
+          {tab === 'dashboard' && <DashboardPage />}
         </main>
 
         {/* 모바일 하단 탭바 */}
