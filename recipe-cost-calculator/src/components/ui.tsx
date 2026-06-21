@@ -5,12 +5,14 @@ import type {
   SelectHTMLAttributes,
 } from 'react'
 
-type Variant = 'primary' | 'secondary' | 'danger' | 'ghost'
+type Variant = 'primary' | 'secondary' | 'outline' | 'danger' | 'ghost'
 
 const VARIANT_CLASS: Record<Variant, string> = {
-  primary: 'bg-violet-600 text-white hover:bg-violet-700',
-  secondary: 'bg-gray-100 text-gray-800 hover:bg-gray-200',
-  danger: 'bg-red-50 text-red-600 hover:bg-red-100',
+  primary: 'bg-violet-600 text-white shadow-sm hover:bg-violet-700',
+  secondary: 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-100',
+  outline:
+    'border border-violet-300 bg-violet-50 text-violet-700 hover:bg-violet-100',
+  danger: 'border border-red-300 bg-red-50 text-red-600 hover:bg-red-100',
   ghost: 'bg-transparent text-gray-500 hover:bg-gray-100',
 }
 

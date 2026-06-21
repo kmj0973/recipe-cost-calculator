@@ -169,7 +169,7 @@ function RecipeEditor({
               />
             </Field>
             <Button variant="danger" onClick={onDelete}>
-              레시피 삭제
+              🗑 레시피 삭제
             </Button>
           </div>
         </Card>
@@ -240,10 +240,10 @@ function RecipeEditor({
                       ))}
                     </Select>
                     <Button
-                      variant="ghost"
+                      variant="danger"
                       onClick={() => removeItem(index)}
                     >
-                      삭제
+                      🗑 삭제
                     </Button>
                     {incompatible && (
                       <p className="w-full text-xs text-red-500">

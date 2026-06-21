@@ -200,18 +200,18 @@ export function IngredientsPage() {
                       {formatUnitPrice(unitPrice(ing), unitLabel(ing.unit))}
                     </td>
                     <td className="py-2 pr-4">
-                      <div className="flex justify-end gap-1">
+                      <div className="flex justify-end gap-2">
                         <Button
-                          variant="ghost"
+                          variant="outline"
                           onClick={() => startEdit(ing)}
                         >
-                          수정
+                          ✏️ 수정
                         </Button>
                         <Button
                           variant="danger"
                           onClick={() => handleDelete(ing)}
                         >
-                          삭제
+                          🗑 삭제
                         </Button>
                       </div>
                     </td>
