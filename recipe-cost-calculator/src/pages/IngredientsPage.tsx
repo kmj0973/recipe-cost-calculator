@@ -142,7 +142,7 @@ export function IngredientsPage() {
             </Select>
           </Field>
         </div>
-        <div className="mt-3 flex items-center gap-2">
+        <div className="mt-3 flex flex-wrap items-center gap-2">
           <Button onClick={handleSubmit} disabled={!canSubmit}>
             {editingId ? '수정 완료' : '+ 추가'}
           </Button>
@@ -170,7 +170,7 @@ export function IngredientsPage() {
           <EmptyState message="등록된 재료가 없습니다. 위에서 재료를 추가해 보세요." />
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+            <table className="w-full whitespace-nowrap text-sm">
               <thead>
                 <tr className="border-b border-gray-200 text-left text-gray-500">
                   <th className="py-2 pr-4 font-medium">이름</th>

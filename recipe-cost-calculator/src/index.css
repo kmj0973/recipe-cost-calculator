@@ -5,10 +5,13 @@
  * 루트 폰트 크기를 뷰포트 너비에 비례시켜, rem 기반인 Tailwind의
  * 폰트/간격/크기가 화면 크기에 따라 연속적으로 스케일되도록 한다.
  * (미디어쿼리 브레이크포인트는 항상 16px 기준이라 영향받지 않음)
- *   320px → 약 15px,  768px → 약 16.9px,  1024px 이상 → 18px
+ *   360px → 약 14px,  768px → 약 15.9px,  1024px 이상 → 17px
  */
 html {
-  font-size: clamp(15px, 13.4px + 0.45vw, 18px);
+  font-size: clamp(13.5px, 12.4px + 0.45vw, 17px);
+  /* 모바일 브라우저(iOS Safari 등)가 본문 텍스트를 임의로 확대하지 못하게 고정 */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 html,

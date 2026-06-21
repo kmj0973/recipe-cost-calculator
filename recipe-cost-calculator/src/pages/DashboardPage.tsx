@@ -91,7 +91,7 @@ export function DashboardPage() {
         </h2>
         <p className="mb-3 text-xs text-gray-400">원가율 높은 순 정렬</p>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm">
+          <table className="w-full whitespace-nowrap text-sm">
             <thead>
               <tr className="border-b border-gray-200 text-left text-gray-500">
                 <th className="py-2 pr-4 font-medium">메뉴</th>
