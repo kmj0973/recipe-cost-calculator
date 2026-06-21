@@ -65,8 +65,9 @@ export function calcCosting(
   const unitProfit = hasPrice ? price - unitCost : null
 
   const target = recipe.targetCostRate
-  const hasTarget = typeof target === 'number' && target > 0 && target < 100
-  const suggestedPrice = hasTarget ? unitCost / (1 - target / 100) : null
+  // 원가율 = 원가 / 판매가 이므로, 판매가 = 원가 / (목표원가율/100)
+  const hasTarget = typeof target === 'number' && target > 0 && target <= 100
+  const suggestedPrice = hasTarget ? unitCost / (target / 100) : null
 
   return {
     totalCost,
